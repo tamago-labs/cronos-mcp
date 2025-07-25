@@ -1,0 +1,71 @@
+{
+    "name": "@tamago-labs/cronos-mcp",
+    "version": "0.1.0",
+    "description": "MCP server for Cronos Web3 Analytics - comprehensive blockchain analytics for Cronos and zkEVM networks with VVS Finance DEX integration",
+    "main": "dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "bin": {
+        "cronos-mcp": "dist/index.js"
+    },
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "cronos",
+        "crypto.com",
+        "zkevm",
+        "vvs",
+        "vvs finance",
+        "dex",
+        "defi",
+        "web3",
+        "analytics",
+        "blockchain",
+        "MCP",
+        "model context protocol",
+        "developer platform",
+        "crypto",
+        "ethereum",
+        "evm",
+        "amm",
+        "liquidity"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "prepare": "npm run build",
+        "test": "jest",
+        "dev": "ts-node src/index.ts",
+        "start": "node dist/index.js",
+        "dev:cronos": "npm run dev -- --cronos_evm_api_key=$CRONOS_EVM_API_KEY",
+        "dev:zkevm": "npm run dev -- --cronos_zkevm_api_key=$CRONOS_ZKEVM_API_KEY",
+        "dev:multi": "npm run dev -- --cronos_evm_api_key=$CRONOS_EVM_API_KEY --cronos_zkevm_api_key=$CRONOS_ZKEVM_API_KEY"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tamago-labs/cronos-mcp.git"
+    },
+    "author": "Pisuth",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/tamago-labs/cronos-mcp/issues"
+    },
+    "homepage": "https://www.tamagolabs.com",
+    "dependencies": { 
+        "@modelcontextprotocol/sdk": "^1.10.2",
+        "@crypto.com/developer-platform-client": "^1.0.0",
+        "axios": "^1.10.0",
+        "multiformats": "^9.9.0",
+        "viem": "^2.8.12",
+        "zod": "^3.24.3"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.14",
+        "@types/node": "^22.15.2",
+        "jest": "^29.7.0",
+        "ts-jest": "^29.3.2",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.4.0",
+        "typescript": "^5.8.3"
+    }
+}
