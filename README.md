@@ -1,4 +1,4 @@
-# Cronos MCP - Web3 Analytics Server
+# Cronos MCP
 
 ![NPM Version](https://img.shields.io/npm/v/@tamago-labs/cronos-mcp)
 
